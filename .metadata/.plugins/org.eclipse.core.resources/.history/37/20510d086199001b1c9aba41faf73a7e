@@ -1,0 +1,47 @@
+package application;
+
+import java.util.Iterator;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Room;
+
+public class RentRoom {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		sc.close();
+		
+		System.out.println("How many rooms will by rented?");
+		int quantytiRent = sc.nextInt();
+		
+		Room[] room = new Room[quantytiRent];
+		int rent = 0;
+		String name = "";
+		String email = "";
+		
+		for (int i = 0; i < quantytiRent; i++) {
+			System.out.println("Rent:");
+			rent = sc.nextInt();
+			System.out.println("name:");
+			name = sc.next();
+			System.out.println("email:");
+			email = sc.next();
+			room[i].setName(name);
+			room[i].setEmail(email);
+		}
+		
+		System.out.println();
+		System.out.println();
+		for (int i = 0; i < room.length; i++) {
+			if (room[i] != null){
+				System.out.println(i+": "+room[i].getName()+", "+room[i].getEmail());
+			}
+		}
+		
+		
+
+	}
+
+}

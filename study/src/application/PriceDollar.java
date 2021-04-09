@@ -18,11 +18,8 @@ public class PriceDollar {
 		cd.quantyti = ca.nextDouble();
 		System.out.println("");
 		System.out.println(cd.toString());
-		
-		
-		
+
 		ca.close();
-		
 
 	}
 
